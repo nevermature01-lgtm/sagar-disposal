@@ -369,7 +369,6 @@ export default function Home() {
                             "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
                             (img.description === "Professional sorting area" || img.description === "Eco-friendly disposal process") && "-rotate-90 scale-[1.35]"
                           )}
-                          data-ai-hint={img.imageHint}
                         />
                       )}
                     </div>
