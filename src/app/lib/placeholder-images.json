@@ -68,7 +68,7 @@
     {
       "id": "gallery-6",
       "description": "Industrial shredding equipment",
-      "imageUrl": "https://picsum.photos/seed/fac5/800/600",
+      "imageUrl": "/img-6.jpg",
       "imageHint": "industrial shredder",
       "width": 800,
       "height": 600
