@@ -26,14 +26,6 @@
       "height": 200
     },
     {
-      "id": "gallery-1",
-      "description": "Metal scrap processing",
-      "imageUrl": "/img-1.avif",
-      "imageHint": "metal scrap",
-      "width": 800,
-      "height": 600
-    },
-    {
       "id": "gallery-2",
       "description": "Recycling facility overview",
       "imageUrl": "/img-2.jpg",
