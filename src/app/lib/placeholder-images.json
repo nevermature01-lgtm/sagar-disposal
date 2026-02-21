@@ -22,7 +22,7 @@
     {
       "id": "gallery-1",
       "description": "Heavy machinery in scrap yard",
-      "imageUrl": "https://picsum.photos/seed/10/800/600",
+      "imageUrl": "/img-1.jpg",
       "imageHint": "scrap machinery"
     },
     {
