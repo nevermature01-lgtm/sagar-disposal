@@ -2,17 +2,13 @@ import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Testimonials } from "@/components/Testimonials";
-import { FAQSection } from "@/components/FAQSection";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { 
   CheckCircle2, 
   FileText, 
-  Bike, 
-  Zap, 
   Leaf, 
   PhoneCall, 
-  Recycle,
   ClipboardCheck,
   Truck,
   ShieldCheck, 
@@ -28,21 +24,16 @@ import {
   Info,
   Globe,
   FileCheck,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
   Mail,
   MapPin,
-  Phone
+  Phone,
+  Zap
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === "hero-desk") || PlaceHolderImages[0];
-  const carImg = PlaceHolderImages.find(img => img.id === "scrap-car") || PlaceHolderImages[0];
-  const bikeImg = PlaceHolderImages.find(img => img.id === "scrap-bike") || PlaceHolderImages[0];
   const alertImg = PlaceHolderImages.find(img => img.id === "alert-image") || PlaceHolderImages[0];
   const logoImg = PlaceHolderImages.find(img => img.id === "logo") || PlaceHolderImages[0];
 
@@ -51,9 +42,13 @@ export default function Home() {
     { name: "Process", href: "#our-route" },
     { name: "Why Us", href: "#why-us" },
     { name: "Our Services", href: "#services" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Gallery", href: "#gallery" },
     { name: "Contact Us", href: "#contact" },
   ];
+
+  const galleryImages = PlaceHolderImages.filter(img => 
+    ["hero-yard", "scrap-car", "scrap-bike", "recycling-machine"].includes(img.id)
+  );
 
   return (
     <div className="flex flex-col min-h-screen font-body transition-colors duration-300">
@@ -328,8 +323,40 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Gallery Section */}
+        <section className="py-16 lg:py-28 bg-slate-50 relative overflow-hidden" id="gallery">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-20">
+              <h2 className="text-3xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tighter uppercase italic">
+                Our <span className="text-primary">Gallery</span>
+              </h2>
+              <p className="text-slate-500 text-sm lg:text-lg max-w-2xl mx-auto font-medium">
+                Take a look at our professional recycling facility and collection operations in Gwalior.
+              </p>
+              <div className="h-2 w-20 lg:w-28 bg-primary mx-auto rounded-full mt-6"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {galleryImages.map((img, i) => (
+                <div key={i} className="group relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-xl">
+                  <Image 
+                    src={img.imageUrl} 
+                    alt={img.description}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    data-ai-hint={img.imageHint}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                    <p className="text-white font-bold italic uppercase tracking-tight">{img.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Enforcement Alert Section */}
-        <section className="py-12 lg:py-28 bg-slate-50 relative overflow-hidden" id="alert">
+        <section className="py-12 lg:py-28 bg-white relative overflow-hidden" id="alert">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative bg-white border-2 border-red-50 rounded-[2rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl shadow-red-900/5 overflow-hidden group">
               <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full -mr-48 -mt-48 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
@@ -353,7 +380,7 @@ export default function Home() {
                     <Button className="w-full sm:w-auto h-12 lg:h-16 px-8 lg:px-12 bg-red-600 hover:bg-red-700 text-white font-black text-base lg:text-lg rounded-2xl shadow-xl shadow-red-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
                       Protect Your Asset Now
                     </Button>
-                    <Link href="#faq" className="flex items-center gap-2 text-slate-500 hover:text-red-600 font-bold transition-colors text-xs lg:text-base">
+                    <Link href="#contact" className="flex items-center gap-2 text-slate-500 hover:text-red-600 font-bold transition-colors text-xs lg:text-base">
                       <Info className="h-4 w-4 lg:h-5 lg:w-5" />
                       Learn about legal disposal
                     </Link>
@@ -379,17 +406,6 @@ export default function Home() {
 
         {/* Testimonials */}
         <Testimonials />
-
-        {/* FAQ Section */}
-        <section className="py-16 lg:py-28 bg-slate-100 dark:bg-slate-900/50" id="faq">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-20">
-              <h2 className="text-3xl lg:text-6xl font-black text-slate-900 dark:text-white mb-5 tracking-tighter uppercase italic">Common Questions</h2>
-              <div className="h-2 w-20 lg:w-28 bg-primary mx-auto rounded-full"></div>
-            </div>
-            <FAQSection />
-          </div>
-        </section>
 
         {/* Final CTA */}
         <section className="py-16 lg:py-28 bg-white dark:bg-[#0f172a]" id="contact">

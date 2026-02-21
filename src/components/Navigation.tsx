@@ -44,7 +44,7 @@ export function Navigation() {
     { name: "Process", href: "#our-route" },
     { name: "Why Us", href: "#why-us" },
     { name: "Our Services", href: "#services" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Gallery", href: "#gallery" },
     { name: "Contact Us", href: "#contact" },
   ];
 
