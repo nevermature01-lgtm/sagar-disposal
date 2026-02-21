@@ -54,6 +54,18 @@
       "description": "Industrial shredding equipment",
       "imageUrl": "https://picsum.photos/seed/15/800/600",
       "imageHint": "industrial shredder"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Professional sorting area",
+      "imageUrl": "https://picsum.photos/seed/16/800/600",
+      "imageHint": "waste management"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Eco-friendly disposal process",
+      "imageUrl": "https://picsum.photos/seed/17/800/600",
+      "imageHint": "green recycling"
     }
   ]
 }
