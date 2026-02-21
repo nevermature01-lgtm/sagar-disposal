@@ -31,12 +31,19 @@ import {
   Zap,
   ImageIcon
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === "hero-desk") || PlaceHolderImages[0];
-  const alertImg = PlaceHolderImages.find(img => img.id === "alert-image") || PlaceHolderImages[0];
+  const alertImg = PlacePlaceholderImages.find(img => img.id === "alert-image") || PlaceHolderImages[0];
   const logoImg = PlaceHolderImages.find(img => img.id === "logo") || PlaceHolderImages[0];
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith("gallery-"));
 
@@ -322,7 +329,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gallery Section */}
+        {/* Gallery Section with Slider */}
         <section className="py-20 lg:py-32 bg-slate-50" id="gallery">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -338,45 +345,53 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {galleryImages.map((img, i) => (
-                <div 
-                  key={i} 
-                  className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500"
-                >
-                  {img.type === 'video' ? (
-                    <video 
-                      src={img.imageUrl}
-                      className={cn(
-                        "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
-                        (img.description === "Professional sorting area" || img.description === "Eco-friendly disposal process") && "-rotate-90 scale-[1.35]"
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4 lg:-ml-6">
+                {galleryImages.map((img, i) => (
+                  <CarouselItem key={i} className="pl-4 lg:pl-6 md:basis-1/2 lg:basis-1/3">
+                    <div 
+                      className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500"
+                    >
+                      {img.type === 'video' ? (
+                        <video 
+                          src={img.imageUrl}
+                          className={cn(
+                            "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                            (img.description === "Professional sorting area" || img.description === "Eco-friendly disposal process") && "-rotate-90 scale-[1.35]"
+                          )}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        />
+                      ) : (
+                        <Image 
+                          src={img.imageUrl} 
+                          alt={img.description}
+                          width={img.width || 800}
+                          height={img.height || 600}
+                          className={cn(
+                            "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                            (img.description === "Professional sorting area" || img.description === "Eco-friendly disposal process") && "-rotate-90 scale-[1.35]"
+                          )}
+                          data-ai-hint={img.imageHint}
+                        />
                       )}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    />
-                  ) : (
-                    <Image 
-                      src={img.imageUrl} 
-                      alt={img.description}
-                      width={img.width || 800}
-                      height={img.height || 600}
-                      className={cn(
-                        "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
-                        (img.description === "Professional sorting area" || img.description === "Eco-friendly disposal process") && "-rotate-90 scale-[1.35]"
-                      )}
-                      data-ai-hint={img.imageHint}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <p className="text-white font-black text-lg uppercase italic tracking-tight">{img.description}</p>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-4 mt-12">
+                <CarouselPrevious className="static translate-y-0 h-12 w-12 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 transition-all rounded-xl shadow-lg" />
+                <CarouselNext className="static translate-y-0 h-12 w-12 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 transition-all rounded-xl shadow-lg" />
+              </div>
+            </Carousel>
           </div>
         </section>
 
