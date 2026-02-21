@@ -17,27 +17,6 @@
       "description": "Shivam Disposal official logo",
       "imageUrl": "/IMG-20260220-WA0039-removebg-preview.png",
       "imageHint": "logo"
-    },
-    {
-      "id": "gallery-1",
-      "description": "Our Professional Office Facility",
-      "imageUrl": "/desk.jpg",
-      "imageHint": "office",
-      "type": "image"
-    },
-    {
-      "id": "gallery-2",
-      "description": "Authorized Recovery Vehicle",
-      "imageUrl": "/IMG-20260220-WA0039-removebg-preview.png",
-      "imageHint": "truck",
-      "type": "image"
-    },
-    {
-      "id": "gallery-video-1",
-      "description": "Facility Operations Tour",
-      "imageUrl": "/video1.mp4",
-      "imageHint": "video",
-      "type": "video"
     }
   ]
 }

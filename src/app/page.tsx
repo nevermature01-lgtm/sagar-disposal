@@ -44,13 +44,8 @@ export default function Home() {
     { name: "Process", href: "#our-route" },
     { name: "Why Us", href: "#why-us" },
     { name: "Our Services", href: "#services" },
-    { name: "Gallery", href: "#gallery" },
     { name: "Contact Us", href: "#contact" },
   ];
-
-  const galleryItems = PlaceHolderImages.filter(img => 
-    img.id.startsWith("gallery-")
-  );
 
   return (
     <div className="flex flex-col min-h-screen font-body transition-colors duration-300">
@@ -321,54 +316,6 @@ export default function Home() {
                   </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Section */}
-        <section className="py-16 lg:py-28 bg-slate-50 relative overflow-hidden" id="gallery">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-20">
-              <h2 className="text-3xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tighter uppercase italic">
-                Our <span className="text-primary">Gallery</span>
-              </h2>
-              <p className="text-slate-500 text-sm lg:text-lg max-w-2xl mx-auto font-medium">
-                Professional recycling facility and collection operations in Gwalior.
-              </p>
-              <div className="h-2 w-20 lg:w-28 bg-primary mx-auto rounded-full mt-6"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {galleryItems.map((item, i) => (
-                <div key={i} className="group relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-xl bg-slate-200">
-                  {item.type === 'video' ? (
-                    <div className="relative w-full h-full">
-                      <video 
-                        src={item.imageUrl} 
-                        className="w-full h-full object-cover"
-                        controls
-                        poster="/IMG-20260220-WA0039-removebg-preview.png"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
-                        <div className="w-16 h-16 rounded-full bg-primary/80 flex items-center justify-center text-white">
-                          <Play className="h-8 w-8 fill-current" />
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <Image 
-                      src={item.imageUrl} 
-                      alt={item.description}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      data-ai-hint={item.imageHint}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8 pointer-events-none">
-                    <p className="text-white font-bold italic uppercase tracking-tight">{item.description}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
