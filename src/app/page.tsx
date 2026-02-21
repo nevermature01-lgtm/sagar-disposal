@@ -347,7 +347,10 @@ export default function Home() {
                   {img.type === 'video' ? (
                     <video 
                       src={img.imageUrl}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className={cn(
+                        "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                        img.description === "Professional sorting area" && "-rotate-90 scale-[1.35]"
+                      )}
                       autoPlay
                       muted
                       loop
@@ -359,7 +362,10 @@ export default function Home() {
                       alt={img.description}
                       width={img.width || 800}
                       height={img.height || 600}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className={cn(
+                        "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                        img.description === "Professional sorting area" && "-rotate-90 scale-[1.35]"
+                      )}
                       data-ai-hint={img.imageHint}
                     />
                   )}
