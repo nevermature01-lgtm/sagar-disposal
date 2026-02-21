@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -43,7 +42,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === "hero-desk") || PlaceHolderImages[0];
-  const alertImg = PlacePlaceholderImages.find(img => img.id === "alert-image") || PlaceHolderImages[0];
+  const alertImg = PlaceHolderImages.find(img => img.id === "alert-image") || PlaceHolderImages[0];
   const logoImg = PlaceHolderImages.find(img => img.id === "logo") || PlaceHolderImages[0];
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith("gallery-"));
 
