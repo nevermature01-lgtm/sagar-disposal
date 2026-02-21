@@ -1,0 +1,112 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary: vibrant teal #30D5C8 */
+    --primary: 175 66% 51%;
+    --primary-foreground: 180 100% 10%;
+    
+    /* Background: light desaturated cyan #E0FFFF */
+    --background: 180 100% 97%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --secondary: 180 30% 90%;
+    --secondary-foreground: 180 50% 20%;
+    
+    --muted: 180 20% 90%;
+    --muted-foreground: 180 20% 40%;
+    
+    /* Accent: Analogous green #3CB371 */
+    --accent: 147 50% 47%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 180 20% 85%;
+    --input: 180 20% 85%;
+    --ring: 175 66% 51%;
+    
+    --radius: 0.75rem;
+
+    --chart-1: 175 66% 51%;
+    --chart-2: 147 50% 47%;
+    --chart-3: 180 100% 40%;
+    --chart-4: 160 60% 45%;
+    --chart-5: 190 70% 50%;
+  }
+
+  .dark {
+    /* Background Dark: #10221f */
+    --background: 171 36% 10%;
+    --foreground: 210 40% 98%;
+    
+    --card: 171 36% 12%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 171 36% 12%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 175 66% 51%;
+    --primary-foreground: 171 36% 5%;
+    
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 147 50% 47%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 171 36% 20%;
+    --input: 171 36% 20%;
+    --ring: 175 66% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  /* Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100 dark:bg-slate-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/40 rounded-full hover:bg-primary/60 transition-colors;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-primary/10;
+}
+
+.fill-1 {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Ensure smooth scrolling even if next/link scroll logic is bypassed */
+html {
+  scroll-behavior: smooth !important;
+}
