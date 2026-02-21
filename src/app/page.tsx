@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -27,7 +28,8 @@ import {
   Mail,
   MapPin,
   Phone,
-  Zap
+  Zap,
+  Play
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -46,8 +48,8 @@ export default function Home() {
     { name: "Contact Us", href: "#contact" },
   ];
 
-  const galleryImages = PlaceHolderImages.filter(img => 
-    ["hero-yard", "scrap-car", "scrap-bike", "recycling-machine"].includes(img.id)
+  const galleryItems = PlaceHolderImages.filter(img => 
+    img.id.startsWith("gallery-")
   );
 
   return (
@@ -331,23 +333,39 @@ export default function Home() {
                 Our <span className="text-primary">Gallery</span>
               </h2>
               <p className="text-slate-500 text-sm lg:text-lg max-w-2xl mx-auto font-medium">
-                Take a look at our professional recycling facility and collection operations in Gwalior.
+                Professional recycling facility and collection operations in Gwalior.
               </p>
               <div className="h-2 w-20 lg:w-28 bg-primary mx-auto rounded-full mt-6"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {galleryImages.map((img, i) => (
-                <div key={i} className="group relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-xl">
-                  <Image 
-                    src={img.imageUrl} 
-                    alt={img.description}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    data-ai-hint={img.imageHint}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                    <p className="text-white font-bold italic uppercase tracking-tight">{img.description}</p>
+              {galleryItems.map((item, i) => (
+                <div key={i} className="group relative overflow-hidden rounded-[2rem] aspect-[4/3] shadow-xl bg-slate-200">
+                  {item.type === 'video' ? (
+                    <div className="relative w-full h-full">
+                      <video 
+                        src={item.imageUrl} 
+                        className="w-full h-full object-cover"
+                        controls
+                        poster="/IMG-20260220-WA0039-removebg-preview.png"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+                        <div className="w-16 h-16 rounded-full bg-primary/80 flex items-center justify-center text-white">
+                          <Play className="h-8 w-8 fill-current" />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Image 
+                      src={item.imageUrl} 
+                      alt={item.description}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      data-ai-hint={item.imageHint}
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8 pointer-events-none">
+                    <p className="text-white font-bold italic uppercase tracking-tight">{item.description}</p>
                   </div>
                 </div>
               ))}

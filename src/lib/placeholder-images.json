@@ -7,30 +7,6 @@
       "imageHint": "office desk"
     },
     {
-      "id": "hero-yard",
-      "description": "Large organized vehicle recycling yard with stacked cars",
-      "imageUrl": "https://images.unsplash.com/photo-1756365222297-ddcc360ae74c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbmR1c3RyaWFsJTIwc2NyYXB5YXJkfGVufDB8fHx8MTc3MTU2OTc0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "industrial scrapyard"
-    },
-    {
-      "id": "scrap-car",
-      "description": "Modern scrap car being loaded onto a recovery tow truck",
-      "imageUrl": "https://images.unsplash.com/photo-1767385894916-fcdde44f34c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw8fHxzY3JhcCUyMGNhcnxlbnwwfHx8fDE3NzE1Njk3NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "scrap car"
-    },
-    {
-      "id": "scrap-bike",
-      "description": "Collection of old motorcycles and bikes in a garage",
-      "imageUrl": "https://images.unsplash.com/photo-1643449989954-24451b811d7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3RvcmN5Y2xlJTIwc2NyYXB8ZW58MHx8fHwxNzcxNTY5NzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "motorcycle scrap"
-    },
-    {
-      "id": "recycling-machine",
-      "description": "Modern high-tech metal shredding machinery in operation",
-      "imageUrl": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmR1c3RyaWFsJTIwbWFjaGluZXJ5fGVufDB8fHx8MTc3MTUwNTE4OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "industrial machinery"
-    },
-    {
       "id": "alert-image",
       "description": "Vehicle enforcement alert visual",
       "imageUrl": "/IMG-20260220-WA0039-removebg-preview.png",
@@ -38,9 +14,30 @@
     },
     {
       "id": "logo",
-      "description": "ScrapWise official logo",
+      "description": "Shivam Disposal official logo",
       "imageUrl": "/IMG-20260220-WA0039-removebg-preview.png",
       "imageHint": "logo"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Our Professional Office Facility",
+      "imageUrl": "/desk.jpg",
+      "imageHint": "office",
+      "type": "image"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Authorized Recovery Vehicle",
+      "imageUrl": "/IMG-20260220-WA0039-removebg-preview.png",
+      "imageHint": "truck",
+      "type": "image"
+    },
+    {
+      "id": "gallery-video-1",
+      "description": "Facility Operations Tour",
+      "imageUrl": "/video1.mp4",
+      "imageHint": "video",
+      "type": "video"
     }
   ]
 }
