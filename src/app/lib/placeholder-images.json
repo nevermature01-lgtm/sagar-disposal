@@ -85,10 +85,11 @@
     {
       "id": "gallery-8",
       "description": "Eco-friendly disposal process",
-      "imageUrl": "https://picsum.photos/seed/fac7/800/600",
+      "imageUrl": "/vid-2.mp4",
       "imageHint": "green recycling",
       "width": 800,
-      "height": 600
+      "height": 600,
+      "type": "video"
     }
   ]
 }
