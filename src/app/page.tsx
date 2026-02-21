@@ -42,7 +42,6 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === "hero-desk") || PlaceHolderImages[0];
-  const alertImg = PlaceHolderImages.find(img => img.id === "alert-image") || PlaceHolderImages[0];
   const logoImg = PlaceHolderImages.find(img => img.id === "logo") || PlaceHolderImages[0];
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith("gallery-"));
 
@@ -400,44 +399,28 @@ export default function Home() {
             <div className="relative bg-white border-2 border-red-50 rounded-[2rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl shadow-red-900/5 overflow-hidden group">
               <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full -mr-48 -mt-48 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
               
-              <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 relative z-10">
-                <div className="flex-1 text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-100 text-red-600 border border-red-200 mb-6 lg:mb-8 animate-pulse">
-                    <AlertOctagon className="h-3.5 w-3.5" />
-                    <span className="text-[10px] lg:text-xs font-black uppercase tracking-widest">Enforcement Alert</span>
-                  </div>
-                  
-                  <h2 className="text-2xl lg:text-5xl font-black text-slate-900 mb-4 lg:mb-6 leading-[1.1] tracking-tighter uppercase italic">
-                    Don't Let Your <span className="text-red-600">Vehicle Get Seized</span>
-                  </h2>
-                  
-                  <p className="text-slate-600 text-[13px] lg:text-lg font-medium leading-relaxed mb-8 lg:mb-10 max-w-2xl">
-                    Government agencies are actively identifying and seizing end-of-life vehicles without prior notice. As an <strong>Authorized Recycling Facility</strong>, we help you scrap legally, secure your payout, and provide valid documentation before it's too late.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6 justify-center lg:justify-start">
-                    <Button className="w-full sm:w-auto h-12 lg:h-16 px-8 lg:px-12 bg-red-600 hover:bg-red-700 text-white font-black text-base lg:text-lg rounded-2xl shadow-xl shadow-red-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
-                      Protect Your Asset Now
-                    </Button>
-                    <Link href="#contact" className="flex items-center gap-2 text-slate-500 hover:text-red-600 font-bold transition-colors text-xs lg:text-base">
-                      <Info className="h-4 w-4 lg:h-5 lg:w-5" />
-                      Learn about legal disposal
-                    </Link>
-                  </div>
+              <div className="flex flex-col items-center relative z-10 text-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-100 text-red-600 border border-red-200 mb-6 lg:mb-8 animate-pulse">
+                  <AlertOctagon className="h-3.5 w-3.5" />
+                  <span className="text-[10px] lg:text-xs font-black uppercase tracking-widest">Enforcement Alert</span>
                 </div>
-
-                <div className="w-full lg:w-5/12">
-                  <div className="relative aspect-square max-w-[400px] mx-auto">
-                    <Image 
-                      src={alertImg.imageUrl} 
-                      alt={alertImg.description}
-                      width={alertImg.width || 800}
-                      height={alertImg.height || 600}
-                      className="object-contain"
-                      data-ai-hint={alertImg.imageHint}
-                      priority
-                    />
-                  </div>
+                
+                <h2 className="text-2xl lg:text-5xl font-black text-slate-900 mb-4 lg:mb-6 leading-[1.1] tracking-tighter uppercase italic">
+                  Don't Let Your <span className="text-red-600">Vehicle Get Seized</span>
+                </h2>
+                
+                <p className="text-slate-600 text-[13px] lg:text-lg font-medium leading-relaxed mb-8 lg:mb-10 max-w-3xl">
+                  Government agencies are actively identifying and seizing end-of-life vehicles without prior notice. As an <strong>Authorized Recycling Facility</strong>, we help you scrap legally, secure your payout, and provide valid documentation before it's too late.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6 justify-center">
+                  <Button className="w-full sm:w-auto h-12 lg:h-16 px-8 lg:px-12 bg-red-600 hover:bg-red-700 text-white font-black text-base lg:text-lg rounded-2xl shadow-xl shadow-red-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]" asChild>
+                    <Link href="#hero-section">Protect Your Asset Now</Link>
+                  </Button>
+                  <Link href="#contact" className="flex items-center gap-2 text-slate-500 hover:text-red-600 font-bold transition-colors text-xs lg:text-base">
+                    <Info className="h-4 w-4 lg:h-5 lg:w-5" />
+                    Learn about legal disposal
+                  </Link>
                 </div>
               </div>
             </div>
