@@ -6,6 +6,8 @@ export type ImagePlaceholder = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  width?: number;
+  height?: number;
   type?: 'image' | 'video';
 };
 

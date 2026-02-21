@@ -347,8 +347,9 @@ export default function Home() {
                   <Image 
                     src={img.imageUrl} 
                     alt={img.description}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    width={img.width || 800}
+                    height={img.height || 600}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     data-ai-hint={img.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
@@ -399,7 +400,8 @@ export default function Home() {
                     <Image 
                       src={alertImg.imageUrl} 
                       alt={alertImg.description}
-                      fill
+                      width={alertImg.width || 800}
+                      height={alertImg.height || 600}
                       className="object-contain"
                       data-ai-hint={alertImg.imageHint}
                       priority
@@ -455,7 +457,8 @@ export default function Home() {
                   <Image 
                     src={logoImg.imageUrl} 
                     alt="Shivam Disposal Logo" 
-                    fill
+                    width={logoImg.width || 48}
+                    height={logoImg.height || 48}
                     className="object-contain"
                   />
                 </div>
