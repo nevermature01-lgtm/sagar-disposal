@@ -52,7 +52,7 @@
     {
       "id": "gallery-4",
       "description": "Vehicle recovery truck",
-      "imageUrl": "https://picsum.photos/seed/fac3/800/600",
+      "imageUrl": "/img-4.jpg",
       "imageHint": "tow truck",
       "width": 800,
       "height": 600
