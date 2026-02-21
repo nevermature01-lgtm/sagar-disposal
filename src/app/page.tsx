@@ -29,8 +29,7 @@ import {
   MapPin,
   Phone,
   Zap,
-  Play,
-  Image as ImageIcon
+  ImageIcon
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";

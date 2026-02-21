@@ -28,43 +28,43 @@
     {
       "id": "gallery-2",
       "description": "Recycling facility overview",
-      "imageUrl": "https://picsum.photos/seed/11/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac1/800/600",
       "imageHint": "recycling yard"
     },
     {
       "id": "gallery-3",
       "description": "Metal scrap processing",
-      "imageUrl": "https://picsum.photos/seed/12/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac2/800/600",
       "imageHint": "metal scrap"
     },
     {
       "id": "gallery-4",
       "description": "Vehicle recovery truck",
-      "imageUrl": "https://picsum.photos/seed/13/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac3/800/600",
       "imageHint": "tow truck"
     },
     {
       "id": "gallery-5",
       "description": "Crushed vehicles for recycling",
-      "imageUrl": "https://picsum.photos/seed/14/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac4/800/600",
       "imageHint": "car scrap"
     },
     {
       "id": "gallery-6",
       "description": "Industrial shredding equipment",
-      "imageUrl": "https://picsum.photos/seed/15/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac5/800/600",
       "imageHint": "industrial shredder"
     },
     {
       "id": "gallery-7",
       "description": "Professional sorting area",
-      "imageUrl": "https://picsum.photos/seed/16/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac6/800/600",
       "imageHint": "waste management"
     },
     {
       "id": "gallery-8",
       "description": "Eco-friendly disposal process",
-      "imageUrl": "https://picsum.photos/seed/17/800/600",
+      "imageUrl": "https://picsum.photos/seed/fac7/800/600",
       "imageHint": "green recycling"
     }
   ]
