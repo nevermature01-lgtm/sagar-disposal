@@ -41,8 +41,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
-  const heroImg = PlaceHolderImages.find(img => img.id === "hero-desk") || PlaceHolderImages[0];
-  const logoImg = PlaceHolderImages.find(img => img.id === "logo") || PlaceHolderImages[0];
   const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith("gallery-"));
 
   const navLinks = [
@@ -62,14 +60,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-[90vh] lg:min-h-[85vh] flex items-center overflow-hidden" id="hero-section">
           <div className="absolute inset-0 z-0">
-            <Image 
-              src={heroImg.imageUrl} 
-              alt={heroImg.description}
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroImg.imageHint}
-            />
+            {/* Background image removed, keeping the professional gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/95 via-[#0f172a]/80 to-[#0f172a]/95 lg:bg-gradient-to-r lg:from-[#0f172a]/95 lg:to-[#0f172a]/40"></div>
           </div>
           
@@ -467,15 +458,6 @@ export default function Home() {
             {/* Brand Column */}
             <div className="space-y-8">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="relative w-12 h-12 transition-transform group-hover:scale-110 duration-300">
-                  <Image 
-                    src={logoImg.imageUrl} 
-                    alt="Shivam Disposal Logo" 
-                    width={logoImg.width || 48}
-                    height={logoImg.height || 48}
-                    className="object-contain"
-                  />
-                </div>
                 <span className="text-2xl font-black text-white tracking-tighter uppercase italic">
                   Shivam <span className="text-primary">Disposal</span>
                 </span>

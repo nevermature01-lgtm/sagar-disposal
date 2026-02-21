@@ -1,9 +1,7 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { 
   Phone, 
   Clock, 
@@ -14,7 +12,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Sheet,
   SheetContent,
@@ -28,8 +25,6 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-
-  const logoImg = PlaceHolderImages.find(img => img.id === "logo") || PlaceHolderImages[0];
 
   useEffect(() => {
     setMounted(true);
@@ -87,17 +82,8 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 lg:h-16">
-            {/* Brand Logo */}
+            {/* Brand Title (No Image) */}
             <Link href="/" className="flex items-center gap-2.5 group shrink-0 -ml-1 lg:-ml-2">
-              <div className="relative group-hover:scale-110 transition-transform">
-                <Image 
-                  src={logoImg.imageUrl} 
-                  alt="Shivam Disposal Logo" 
-                  width={52} 
-                  height={52} 
-                  className="object-contain"
-                />
-              </div>
               <div className="flex flex-col">
                 <span className={cn(
                   "text-xl lg:text-2xl font-black tracking-tighter uppercase transition-colors duration-300",
@@ -197,15 +183,6 @@ export function Navigation() {
                     </SheetHeader>
                     <div className="px-6 py-10 border-b border-slate-100">
                       <div className="flex items-center gap-2.5 mb-10">
-                        <div className="relative group-hover:scale-110 transition-transform">
-                          <Image 
-                            src={logoImg.imageUrl} 
-                            alt="Shivam Disposal Logo" 
-                            width={44} 
-                            height={44} 
-                            className="object-contain"
-                          />
-                        </div>
                         <span className="font-black text-xl text-slate-900 uppercase tracking-tighter">Shivam Disposal</span>
                       </div>
                       
