@@ -344,14 +344,25 @@ export default function Home() {
                   key={i} 
                   className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500"
                 >
-                  <Image 
-                    src={img.imageUrl} 
-                    alt={img.description}
-                    width={img.width || 800}
-                    height={img.height || 600}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    data-ai-hint={img.imageHint}
-                  />
+                  {img.type === 'video' ? (
+                    <video 
+                      src={img.imageUrl}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <Image 
+                      src={img.imageUrl} 
+                      alt={img.description}
+                      width={img.width || 800}
+                      height={img.height || 600}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      data-ai-hint={img.imageHint}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-white font-black text-lg uppercase italic tracking-tight">{img.description}</p>

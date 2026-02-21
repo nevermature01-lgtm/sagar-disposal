@@ -27,9 +27,9 @@
     },
     {
       "id": "gallery-1",
-      "description": "Heavy machinery in scrap yard",
-      "imageUrl": "/img-3.jpg",
-      "imageHint": "scrap machinery",
+      "description": "Metal scrap processing",
+      "imageUrl": "/img-1.jpg",
+      "imageHint": "metal scrap",
       "width": 800,
       "height": 600
     },
@@ -43,9 +43,9 @@
     },
     {
       "id": "gallery-3",
-      "description": "Metal scrap processing",
-      "imageUrl": "/img-1.jpg",
-      "imageHint": "metal scrap",
+      "description": "Heavy machinery in scrap yard",
+      "imageUrl": "/img-3.jpg",
+      "imageHint": "scrap machinery",
       "width": 800,
       "height": 600
     },
@@ -76,10 +76,11 @@
     {
       "id": "gallery-7",
       "description": "Professional sorting area",
-      "imageUrl": "https://picsum.photos/seed/fac6/800/600",
+      "imageUrl": "/vid-1.mp4",
       "imageHint": "waste management",
       "width": 800,
-      "height": 600
+      "height": 600,
+      "type": "video"
     },
     {
       "id": "gallery-8",
