@@ -36,7 +36,7 @@
     {
       "id": "gallery-2",
       "description": "Recycling facility overview",
-      "imageUrl": "https://picsum.photos/seed/fac1/800/600",
+      "imageUrl": "/img-2.jpg",
       "imageHint": "recycling yard",
       "width": 800,
       "height": 600
