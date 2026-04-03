@@ -457,7 +457,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 border border-red-200 mb-6">
                   <MapPin className="h-4 w-4" />
                   <span className="text-[10px] font-black uppercase tracking-widest">Main Hub</span>
                 </div>
@@ -466,8 +466,8 @@ export default function Home() {
                 </h2>
                 <div className="space-y-6">
                   <div className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/40">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                      <MapPin className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center shrink-0">
+                      <MapPin className="h-6 w-6 text-red-600" />
                     </div>
                     <div>
                       <p className="text-sm font-black text-slate-900 uppercase italic mb-1">Visit Us At</p>
