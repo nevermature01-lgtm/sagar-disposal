@@ -108,7 +108,7 @@ export function Testimonials() {
 
 function TestimonialCard({ rev }: { rev: typeof reviews[0] }) {
   return (
-    <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 h-full flex flex-col">
+    <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border-2 border-[#0ab99d]/20 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:border-[#0ab99d]/50 transition-all duration-300 h-full flex flex-col">
       <div className="flex text-primary mb-6">
         {[...Array(5)].map((_, j) => (
           <Star key={j} className="h-4 w-4 fill-primary" />
@@ -118,8 +118,8 @@ function TestimonialCard({ rev }: { rev: typeof reviews[0] }) {
         "{rev.text}"
       </p>
       <div className="flex items-center gap-4 pt-6 border-t border-slate-50 dark:border-slate-800">
-        <Avatar className="h-12 w-12 border-2 border-primary/20">
-          <AvatarFallback className="bg-primary/10 text-primary font-black text-sm">
+        <Avatar className="h-12 w-12 border-2 border-[#0ab99d]/20">
+          <AvatarFallback className="bg-[#0ab99d]/10 text-[#0ab99d] font-black text-sm">
             {rev.initials}
           </AvatarFallback>
         </Avatar>
@@ -127,7 +127,7 @@ function TestimonialCard({ rev }: { rev: typeof reviews[0] }) {
           <h5 className="font-black text-slate-900 dark:text-white uppercase tracking-tight italic">
             {rev.name}
           </h5>
-          <p className="text-[10px] font-bold text-primary uppercase tracking-wider">
+          <p className="text-[10px] font-bold text-[#0ab99d] uppercase tracking-wider">
             Sold: {rev.vehicle}
           </p>
         </div>

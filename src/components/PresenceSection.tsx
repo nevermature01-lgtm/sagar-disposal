@@ -49,7 +49,7 @@ export function PresenceSection() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="px-6 py-3 rounded-2xl bg-white shadow-lg shadow-slate-200/50 border border-slate-100 flex items-center gap-3">
+            <div className="px-6 py-3 rounded-2xl bg-white shadow-lg shadow-slate-200/50 border-2 border-[#0ab99d]/20 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#0ab99d]/10 flex items-center justify-center text-[#0ab99d]">
                 <Zap className="h-5 w-5" />
               </div>
@@ -58,7 +58,7 @@ export function PresenceSection() {
                 <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Cities Active</p>
               </div>
             </div>
-            <div className="px-6 py-3 rounded-2xl bg-white shadow-lg shadow-slate-200/50 border border-slate-100 flex items-center gap-3">
+            <div className="px-6 py-3 rounded-2xl bg-white shadow-lg shadow-slate-200/50 border-2 border-[#0ab99d]/20 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#0ab99d]/10 flex items-center justify-center text-[#0ab99d]">
                 <NavIcon className="h-5 w-5" />
               </div>
@@ -71,7 +71,7 @@ export function PresenceSection() {
         </div>
 
         <div className="sticky top-24 z-30 mb-12">
-          <div className="max-w-md mx-auto bg-white/80 backdrop-blur-xl p-1.5 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/40 flex">
+          <div className="max-w-md mx-auto bg-white/80 backdrop-blur-xl p-1.5 rounded-2xl border-2 border-[#0ab99d]/30 shadow-xl shadow-slate-200/40 flex">
             {(["MP", "UP", "RJ"] as StateType[]).map((state) => (
               <button
                 key={state}
@@ -96,7 +96,7 @@ export function PresenceSection() {
                 {mpCities.map((city) => (
                   <CityCard key={city} name={city} />
                 ))}
-                <div className="p-4 rounded-2xl bg-slate-100/50 border border-dashed border-slate-300 flex items-center justify-center opacity-60">
+                <div className="p-4 rounded-2xl bg-slate-100/50 border-2 border-dashed border-[#0ab99d]/20 flex items-center justify-center opacity-60">
                   <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest italic">Expanding Soon...</span>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export function PresenceSection() {
           )}
         </div>
 
-        <div className="mt-20 relative h-[400px] lg:h-[600px] bg-white/50 rounded-[3rem] border border-slate-200 overflow-hidden group">
+        <div className="mt-20 relative h-[400px] lg:h-[600px] bg-white/50 rounded-[3rem] border-4 border-[#0ab99d]/20 overflow-hidden group">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,185,157,0.05),transparent)]"></div>
           <div className="absolute inset-0 flex items-center justify-center p-6 lg:p-12">
             <iframe
@@ -138,7 +138,7 @@ export function PresenceSection() {
           </div>
 
           <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end pointer-events-none">
-            <div className="max-w-xs bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-slate-100 relative z-30 pointer-events-auto">
+            <div className="max-w-xs bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border-2 border-[#0ab99d]/30 relative z-30 pointer-events-auto">
               <h5 className="text-lg font-black text-slate-900 uppercase italic tracking-tight mb-2">Expanding Every Week</h5>
               <p className="text-xs text-slate-500 font-medium leading-relaxed">
                 Visit our authorized facility for professional vehicle recycling and instant legal documentation.
@@ -158,7 +158,7 @@ export function PresenceSection() {
 
 function CityCard({ name }: { name: string }) {
   return (
-    <div className="group p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30 transition-all duration-300 hover:-translate-y-1">
+    <div className="group p-4 rounded-2xl bg-white border-2 border-[#0ab99d]/10 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/50 transition-all duration-300 hover:-translate-y-1">
       <div className="flex items-center gap-3">
         <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-[#0ab99d]/10 flex items-center justify-center text-slate-400 group-hover:text-[#0ab99d] transition-colors">
           <MapPin className="h-4 w-4" />

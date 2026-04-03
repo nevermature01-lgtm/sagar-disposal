@@ -146,21 +146,21 @@ export default function Home() {
                   return (
                     <div key={i} className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0 lg:even:flex-row-reverse">
                       <div className="relative flex items-center justify-center">
-                        <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white border-4 border-primary shadow-xl z-20 flex items-center justify-center text-primary font-black text-lg lg:text-xl">
+                        <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-white border-4 border-[#0ab99d] shadow-xl z-20 flex items-center justify-center text-[#0ab99d] font-black text-lg lg:text-xl">
                           {stepNum}
                         </div>
-                        {i < 3 && <div className="absolute top-full left-1/2 w-0.5 h-12 bg-primary/20 lg:hidden -translate-x-1/2"></div>}
+                        {i < 3 && <div className="absolute top-full left-1/2 w-0.5 h-12 bg-[#0ab99d]/20 lg:hidden -translate-x-1/2"></div>}
                       </div>
 
                       <div className="w-full lg:w-1/2 flex justify-center">
                         <div className={cn(
-                          "w-full max-w-md p-8 lg:p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 group relative",
+                          "w-full max-w-md p-8 lg:p-10 rounded-[2.5rem] bg-white border-2 border-[#0ab99d]/20 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:border-[#0ab99d]/50 transition-all duration-500 group relative",
                           i % 2 === 0 ? "lg:mr-12" : "lg:ml-12"
                         )}>
-                          <div className="absolute top-6 right-8 text-6xl font-black text-primary/5 group-hover:text-primary/10 transition-colors pointer-events-none italic">
+                          <div className="absolute top-6 right-8 text-6xl font-black text-[#0ab99d]/5 group-hover:text-[#0ab99d]/10 transition-colors pointer-events-none italic">
                             {stepNum}
                           </div>
-                          <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                          <div className="w-14 h-14 rounded-2xl bg-[#0ab99d]/10 flex items-center justify-center text-[#0ab99d] mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                             <Icon className="h-7 w-7" />
                           </div>
                           <h3 className="text-xl lg:text-2xl font-black text-slate-900 mb-4 tracking-tight uppercase italic">{step.title}</h3>
@@ -198,7 +198,7 @@ export default function Home() {
               </div>
 
               {/* The Old Way / Middlemen */}
-              <div className="group p-8 lg:p-12 rounded-[3rem] bg-white border border-slate-200 shadow-xl shadow-slate-200/50 hover:border-red-200 transition-all duration-500">
+              <div className="group p-8 lg:p-12 rounded-[3rem] bg-white border-2 border-red-100 shadow-xl shadow-slate-200/50 hover:border-red-200 transition-all duration-500">
                 <div className="flex justify-between items-start mb-10">
                   <div>
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-500 border border-red-100 text-[10px] font-black uppercase tracking-wider mb-4">
@@ -227,17 +227,17 @@ export default function Home() {
               </div>
 
               {/* The Shivam Disposal Way */}
-              <div className="group p-8 lg:p-12 rounded-[3rem] bg-primary/5 border-2 border-primary/20 shadow-2xl shadow-primary/10 relative overflow-hidden transition-all duration-500 hover:border-primary/40">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-32 -mt-32 blur-[80px]"></div>
+              <div className="group p-8 lg:p-12 rounded-[3rem] bg-white border-2 border-[#0ab99d]/30 shadow-2xl shadow-[#0ab99d]/10 relative overflow-hidden transition-all duration-500 hover:border-[#0ab99d]">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#0ab99d]/10 rounded-full -mr-32 -mt-32 blur-[80px]"></div>
                 
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-10">
                     <div>
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-[10px] font-black uppercase tracking-wider mb-4">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0ab99d]/10 text-[#0ab99d] border border-[#0ab99d]/20 text-[10px] font-black uppercase tracking-wider mb-4">
                         <Shield className="h-3 w-3" />
                         Recommended
                       </span>
-                      <h3 className="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight italic">The <span className="text-primary">Shivam Disposal</span> Route</h3>
+                      <h3 className="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight italic">The <span className="text-[#0ab99d]">Shivam Disposal</span> Route</h3>
                     </div>
                   </div>
 
@@ -250,7 +250,7 @@ export default function Home() {
                       { icon: Zap, text: "Same-day collection and instant bank transfer payment." }
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-4">
-                        <div className="mt-1 shrink-0 bg-primary/20 p-2 rounded-xl text-primary">
+                        <div className="mt-1 shrink-0 bg-[#0ab99d]/20 p-2 rounded-xl text-[#0ab99d]">
                           <CheckCircle2 className="h-5 w-5" />
                         </div>
                         <p className="text-slate-800 text-sm lg:text-base font-black leading-relaxed italic">{item.text}</p>
@@ -259,7 +259,7 @@ export default function Home() {
                   </div>
 
                   <div className="mt-12">
-                    <Button className="w-full h-16 bg-primary text-white font-black text-lg rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all" asChild>
+                    <Button className="w-full h-16 bg-[#0ab99d] text-white font-black text-lg rounded-2xl shadow-xl shadow-[#0ab99d]/20 hover:scale-[1.02] active:scale-[0.98] transition-all" asChild>
                       <Link href="tel:+917701088001">Choose Legality - Call Us</Link>
                     </Button>
                   </div>
@@ -274,7 +274,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 lg:mb-20">
               <h2 className="text-3xl lg:text-6xl font-black text-slate-900 dark:text-white mb-5 tracking-tighter uppercase italic">Our Services</h2>
-              <div className="h-2 w-20 lg:w-28 bg-primary mx-auto rounded-full"></div>
+              <div className="h-2 w-20 lg:w-28 bg-[#0ab99d] mx-auto rounded-full"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -307,8 +307,8 @@ export default function Home() {
               ].map((service, i) => {
                 const Icon = service.icon;
                 return (
-                  <div key={i} className="group p-8 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                  <div key={i} className="group p-8 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900/50 border-2 border-[#0ab99d]/10 hover:border-[#0ab99d]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0ab99d]/5">
+                    <div className="w-14 h-14 rounded-2xl bg-[#0ab99d]/10 flex items-center justify-center text-[#0ab99d] mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                       <Icon className="h-7 w-7" />
                     </div>
                     <h3 className="text-xl font-black text-slate-900 dark:text-white mb-4 tracking-tight uppercase italic">{service.title}</h3>
@@ -324,7 +324,7 @@ export default function Home() {
         <section className="py-20 lg:py-32 bg-slate-50" id="gallery">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0ab99d]/10 text-[#0ab99d] border border-[#0ab99d]/20 mb-6">
                 <ImageIcon className="h-4 w-4" />
                 <span className="text-[10px] font-black uppercase tracking-widest">Visual Tour</span>
               </div>
@@ -347,7 +347,7 @@ export default function Home() {
                 {galleryImages.map((img, i) => (
                   <CarouselItem key={i} className="pl-4 lg:pl-6 md:basis-1/2 lg:basis-1/3">
                     <div 
-                      className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500"
+                      className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-[#0ab99d]/20 hover:border-[#0ab99d]/50"
                     >
                       {img.type === 'video' ? (
                         <video 
@@ -391,7 +391,7 @@ export default function Home() {
         {/* Enforcement Alert Section */}
         <section className="py-12 lg:py-28 bg-white relative overflow-hidden" id="alert">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative bg-white border-2 border-red-50 rounded-[2rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl shadow-red-900/5 overflow-hidden group">
+            <div className="relative bg-white border-4 border-red-50 rounded-[2rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl shadow-red-900/5 overflow-hidden group">
               <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full -mr-48 -mt-48 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
               
               <div className="flex flex-col items-center relative z-10 text-center">
@@ -428,12 +428,12 @@ export default function Home() {
         {/* Final CTA */}
         <section className="py-16 lg:py-28 bg-white dark:bg-[#0f172a]" id="contact">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-primary rounded-[3rem] lg:rounded-[4rem] p-10 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-[#0ab99d] rounded-[3rem] lg:rounded-[4rem] p-10 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent)]"></div>
               <div className="relative z-10 max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-7xl font-black mb-8 lg:mb-12 leading-[1.1] tracking-tighter italic uppercase">Ready to clear your driveway?</h2>
                 <div className="flex flex-col items-center gap-6 lg:gap-10">
-                  <Button size="lg" className="h-16 lg:h-24 px-10 lg:px-16 bg-white text-primary font-black rounded-2xl text-xl lg:text-3xl hover:scale-105 hover:text-black transition-all shadow-2xl" asChild>
+                  <Button size="lg" className="h-16 lg:h-24 px-10 lg:px-16 bg-white text-[#0ab99d] font-black rounded-2xl text-xl lg:text-3xl hover:scale-105 hover:text-black transition-all shadow-2xl" asChild>
                     <Link href="#hero-section">
                       Get Instant Value
                     </Link>
@@ -462,10 +462,10 @@ export default function Home() {
                   <span className="text-[10px] font-black uppercase tracking-widest">Main Hub</span>
                 </div>
                 <h2 className="text-3xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tighter uppercase italic">
-                  City <span className="text-primary">Office</span>
+                  City <span className="text-[#0ab99d]">Office</span>
                 </h2>
                 <div className="space-y-6">
-                  <div className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/40">
+                  <div className="flex gap-4 p-6 bg-white rounded-3xl border-2 border-[#0ab99d]/20 shadow-xl shadow-slate-200/40 hover:border-[#0ab99d]/50 transition-all">
                     <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center shrink-0">
                       <MapPin className="h-6 w-6 text-red-600" />
                     </div>
@@ -478,9 +478,9 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/40">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                      <Clock className="h-6 w-6 text-primary" />
+                  <div className="flex gap-4 p-6 bg-white rounded-3xl border-2 border-[#0ab99d]/20 shadow-xl shadow-slate-200/40 hover:border-[#0ab99d]/50 transition-all">
+                    <div className="w-12 h-12 rounded-2xl bg-[#0ab99d]/10 flex items-center justify-center shrink-0">
+                      <Clock className="h-6 w-6 text-[#0ab99d]" />
                     </div>
                     <div>
                       <p className="text-sm font-black text-slate-900 uppercase italic mb-1">Office Hours</p>
@@ -491,9 +491,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative h-[400px] lg:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="relative h-[400px] lg:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-[#0ab99d]/30">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1789.2439!2d78.13735627539958!3d26.23610778841496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c117136f1b13%3A0xf63976c643d7eb74!2sShivam%20Disposal!5e0!3m2!1sen!2sin!4v1740125000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1789.2439!2d78.13735627539958!3d26.23610778841496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c117136f1b13%3A0xf63976c643d7eb74!2sShivam%20Disposal!5e0!3m2!1sen!2sin!4v1740125000000!5m2!1sen!2sin&z=18"
                   className="w-full h-full border-0"
                   allowFullScreen
                   loading="lazy"
@@ -508,7 +508,7 @@ export default function Home() {
 
       <footer className="bg-slate-950 text-slate-400 pt-24 pb-12 border-t border-white/5 relative overflow-hidden">
         {/* Decorative background element */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0ab99d]/50 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
@@ -516,7 +516,7 @@ export default function Home() {
             <div className="space-y-8">
               <Link href="/" className="flex items-center gap-3 group">
                 <span className="text-2xl font-black text-white tracking-tighter uppercase italic">
-                  Shivam <span className="text-primary">Disposal</span>
+                  Shivam <span className="text-[#0ab99d]">Disposal</span>
                 </span>
               </Link>
               <p className="text-sm leading-relaxed font-medium max-w-xs">
@@ -530,8 +530,8 @@ export default function Home() {
               <ul className="space-y-4 text-sm font-bold">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="hover:text-primary transition-colors flex items-center gap-2 group">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors"></div>
+                    <Link href={link.href} className="hover:text-[#0ab99d] transition-colors flex items-center gap-2 group">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#0ab99d]/40 group-hover:bg-[#0ab99d] transition-colors"></div>
                       {link.name}
                     </Link>
                   </li>
@@ -544,8 +544,8 @@ export default function Home() {
               <h4 className="text-white font-black uppercase tracking-widest text-xs mb-8 italic">Contact Details</h4>
               <ul className="space-y-6">
                 <li className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <MapPin className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0ab99d]/10 flex items-center justify-center shrink-0">
+                    <MapPin className="h-5 w-5 text-[#0ab99d]" />
                   </div>
                   <div className="text-sm">
                     <p className="text-white font-black uppercase italic mb-1">City Office</p>
@@ -553,24 +553,24 @@ export default function Home() {
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0ab99d]/10 flex items-center justify-center shrink-0">
+                    <Phone className="h-5 w-5 text-[#0ab99d]" />
                   </div>
                   <div className="text-sm">
                     <p className="text-white font-black uppercase italic mb-1">Call Support</p>
                     <div className="flex flex-col font-medium">
-                      <Link href="tel:+917701088001" className="hover:text-primary transition-colors">+91-7701088001</Link>
-                      <Link href="tel:+917701088002" className="hover:text-primary transition-colors">+91-7701088002</Link>
+                      <Link href="tel:+917701088001" className="hover:text-[#0ab99d] transition-colors">+91-7701088001</Link>
+                      <Link href="tel:+917701088002" className="hover:text-[#0ab99d] transition-colors">+91-7701088002</Link>
                     </div>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <Mail className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-[#0ab99d]/10 flex items-center justify-center shrink-0">
+                    <Mail className="h-5 w-5 text-[#0ab99d]" />
                   </div>
                   <div className="text-sm">
                     <p className="text-white font-black uppercase italic mb-1">Email Support</p>
-                    <Link href="mailto:Shivamdisposalrvsf@gmail.com" className="font-medium text-slate-400 hover:text-primary transition-colors">
+                    <Link href="mailto:Shivamdisposalrvsf@gmail.com" className="font-medium text-slate-400 hover:text-[#0ab99d] transition-colors">
                       Shivamdisposalrvsf@gmail.com
                     </Link>
                   </div>
@@ -579,11 +579,11 @@ export default function Home() {
             </div>
 
             {/* Trust & Accreditations */}
-            <div className="bg-white/5 rounded-3xl p-8 border border-white/10 flex flex-col justify-between">
+            <div className="bg-white/5 rounded-3xl p-8 border-2 border-[#0ab99d]/20 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center">
-                    <ShieldCheck className="h-7 w-7 text-primary" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#0ab99d]/20 flex items-center justify-center">
+                    <ShieldCheck className="h-7 w-7 text-[#0ab99d]" />
                   </div>
                   <p className="text-white font-black uppercase italic leading-tight tracking-tighter">Authorized<br />Facility</p>
                 </div>
@@ -591,7 +591,7 @@ export default function Home() {
                   Fully licensed by the Gwalior RTO and state environmental agencies for professional vehicle disposal.
                 </p>
               </div>
-              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-primary/20 text-primary border border-primary/20 text-[10px] font-black uppercase tracking-widest">
+              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#0ab99d]/20 text-[#0ab99d] border border-[#0ab99d]/20 text-[10px] font-black uppercase tracking-widest">
                 <CheckCircle2 className="h-3 w-3" />
                 100% Legal Scrappage
               </div>

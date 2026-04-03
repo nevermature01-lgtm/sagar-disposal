@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
@@ -120,21 +119,21 @@ export function QuoteForm() {
   }, [brand]);
 
   return (
-    <Card className="w-full max-w-md mx-auto relative overflow-hidden group border-white/40 dark:border-slate-800/50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+    <Card className="w-full max-w-md mx-auto relative overflow-hidden group border-4 border-[#0ab99d]/30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:border-[#0ab99d]/60 transition-all duration-500">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-[#0ab99d]/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
       
       <CardHeader className="space-y-4 pb-4 relative z-10">
         <div className="flex justify-between items-center px-1">
           <div className="flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300">
-            <CheckCircle2 className="h-3.5 w-3.5 text-primary fill-primary/10" />
+            <CheckCircle2 className="h-3.5 w-3.5 text-[#0ab99d] fill-[#0ab99d]/10" />
             Best Price
           </div>
           <div className="flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300">
-            <CheckCircle2 className="h-3.5 w-3.5 text-primary fill-primary/10" />
+            <CheckCircle2 className="h-3.5 w-3.5 text-[#0ab99d] fill-[#0ab99d]/10" />
             Free Pickup
           </div>
           <div className="flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300">
-            <CheckCircle2 className="h-3.5 w-3.5 text-primary fill-primary/10" />
+            <CheckCircle2 className="h-3.5 w-3.5 text-[#0ab99d] fill-[#0ab99d]/10" />
             Legal Papers
           </div>
         </div>
@@ -165,13 +164,13 @@ export function QuoteForm() {
                     className={cn(
                       "flex flex-col items-center justify-center gap-1.5 p-3 rounded-xl border-2 transition-all duration-300 ease-in-out group/btn",
                       isActive 
-                        ? "border-primary bg-primary/10 text-black dark:text-white shadow-md translate-y-[-2px] scale-[1.02]" 
-                        : "border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-950/50 text-slate-500 hover:border-slate-400 hover:text-black dark:hover:text-white hover:bg-white/80"
+                        ? "border-[#0ab99d] bg-[#0ab99d]/10 text-black dark:text-white shadow-md translate-y-[-2px] scale-[1.02]" 
+                        : "border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-950/50 text-slate-500 hover:border-[#0ab99d]/50 hover:text-black dark:hover:text-white hover:bg-white/80"
                     )}
                   >
                     <Icon className={cn(
                       "h-5 w-5 transition-all duration-300", 
-                      isActive ? "text-black dark:text-white scale-110" : "text-slate-400 group-hover/btn:text-black dark:group-hover/btn:text-white"
+                      isActive ? "text-black dark:text-white scale-110" : "text-slate-400 group-hover/btn:text-[#0ab99d]"
                     )} />
                     <span className={cn(
                       "text-[10px] font-black uppercase tracking-wider transition-all duration-300",
@@ -189,20 +188,20 @@ export function QuoteForm() {
             {vehicleType === 'other' ? (
               <>
                 <div className="relative">
-                  <Factory className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                  <Factory className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#0ab99d]" />
                   <Input 
                     name="brand"
                     required
-                    className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400" 
+                    className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-[#0ab99d]" 
                     placeholder="Enter Make" 
                   />
                 </div>
                 <div className="relative">
-                  <Car className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                  <Car className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#0ab99d]" />
                   <Input 
                     name="model"
                     required
-                    className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400" 
+                    className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-[#0ab99d]" 
                     placeholder="Enter Model" 
                   />
                 </div>
@@ -212,7 +211,7 @@ export function QuoteForm() {
                 <div className="space-y-1">
                   <input type="hidden" name="brand" value={brand} />
                   <Select onValueChange={setBrand} value={brand} required name="brand_select">
-                    <SelectTrigger className="bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 h-11 text-xs font-bold text-slate-900 dark:text-white">
+                    <SelectTrigger className="bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 h-11 text-xs font-bold text-slate-900 dark:text-white focus:ring-[#0ab99d]">
                       <SelectValue placeholder="Select Make" />
                     </SelectTrigger>
                     <SelectContent className="backdrop-blur-xl">
@@ -227,7 +226,7 @@ export function QuoteForm() {
                 <div className="space-y-1">
                   <input type="hidden" name="model" value={model} />
                   <Select onValueChange={setModel} value={model} disabled={!brand} required name="model_select">
-                    <SelectTrigger className="bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 h-11 text-xs font-bold text-slate-900 dark:text-white">
+                    <SelectTrigger className="bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 h-11 text-xs font-bold text-slate-900 dark:text-white focus:ring-[#0ab99d]">
                       <SelectValue placeholder="Select Model" />
                     </SelectTrigger>
                     <SelectContent className="backdrop-blur-xl">
@@ -245,19 +244,19 @@ export function QuoteForm() {
 
           <div className="grid grid-cols-2 gap-3">
             <div className="relative">
-              <CreditCard className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+              <CreditCard className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#0ab99d]" />
               <Input 
                 name="reg_no"
                 required
-                className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white placeholder:text-slate-400" 
+                className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-[#0ab99d]" 
                 placeholder="Reg No" 
               />
             </div>
             <div className="relative">
-              <Activity className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary z-10" />
+              <Activity className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#0ab99d] z-10" />
               <input type="hidden" name="scrap_option" value={condition} />
               <Select onValueChange={setCondition} required name="condition_select">
-                <SelectTrigger className="pl-10 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 h-11 text-xs font-bold text-slate-900 dark:text-white">
+                <SelectTrigger className="pl-10 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 h-11 text-xs font-bold text-slate-900 dark:text-white focus:ring-[#0ab99d]">
                   <SelectValue placeholder="Condition" />
                 </SelectTrigger>
                 <SelectContent>
@@ -277,22 +276,22 @@ export function QuoteForm() {
               name="vehicle_details"
               required
               placeholder="Tell us about engine status, major damages, or missing parts..."
-              className="min-h-[60px] bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-medium resize-none"
+              className="min-h-[60px] bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-medium resize-none focus:border-[#0ab99d]" 
             />
           </div>
 
           <div className="grid grid-cols-2 gap-3">
             <div className="relative">
-              <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+              <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#0ab99d]" />
               <Input 
                 name="user_name"
                 required
-                className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400" 
+                className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-[#0ab99d]" 
                 placeholder="Your Name" 
               />
             </div>
             <div className="relative">
-              <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+              <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#0ab99d]" />
               <Input 
                 name="phone_number"
                 required
@@ -305,7 +304,7 @@ export function QuoteForm() {
                   const target = e.target as HTMLInputElement;
                   target.value = target.value.replace(/[^0-9]/g, '');
                 }}
-                className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400" 
+                className="pl-10 h-11 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-[#0ab99d]" 
                 placeholder="Phone No" 
               />
             </div>
