@@ -29,7 +29,8 @@ import {
   MapPin,
   Phone,
   Zap,
-  ImageIcon
+  ImageIcon,
+  Clock
 } from "lucide-react";
 import {
   Carousel,
@@ -192,7 +193,7 @@ export default function Home() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 relative">
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white border-8 border-slate-50 shadow-2xl z-30 hidden lg:flex items-center justify-center text-slate-400 font-black italic text-xl">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white border-8 border-slate-50 shadow-2xl hidden lg:flex items-center justify-center text-slate-400 font-black italic text-xl">
                 VS
               </div>
 
@@ -446,6 +447,59 @@ export default function Home() {
                     </Button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* City Office Location Section */}
+        <section className="py-20 lg:py-32 bg-slate-50" id="city-office">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
+                  <MapPin className="h-4 w-4" />
+                  <span className="text-[10px] font-black uppercase tracking-widest">Main Hub</span>
+                </div>
+                <h2 className="text-3xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tighter uppercase italic">
+                  City <span className="text-primary">Office</span>
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/40">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <MapPin className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-black text-slate-900 uppercase italic mb-1">Visit Us At</p>
+                      <p className="text-slate-600 font-medium leading-relaxed">
+                        M 3/55, TRANSPORT NAGAR, PARKING NO. 6,<br />
+                        Kishanbagh, Gwalior,<br />
+                        Madhya Pradesh, 474010
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/40">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <Clock className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-black text-slate-900 uppercase italic mb-1">Office Hours</p>
+                      <p className="text-slate-600 font-medium leading-relaxed">
+                        Monday - Sunday: 10:00 AM - 7:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative h-[400px] lg:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.4879222587564!2d78.13735627539958!3d26.23610778841496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c117136f1b13%3A0xf63976c643d7eb74!2sShivam%20Disposal!5e0!3m2!1sen!2sin!4v1740125000000!5m2!1sen!2sin"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Shivam Disposal City Office"
+                ></iframe>
               </div>
             </div>
           </div>
