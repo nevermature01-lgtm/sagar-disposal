@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -49,10 +48,10 @@ export default function Home() {
     { name: "Home", href: "/" },
     { name: "Process", href: "#our-route" },
     { name: "Why Us", href: "#why-us" },
-    { name: "Our Services", href: "#services" },
+    { name: "Services", href: "#services" },
     { name: "Gallery", href: "#gallery" },
-    { name: "Contact Us", href: "#contact" },
-    { name: "Our presence", href: "#presence" },
+    { name: "Contact", href: "#contact" },
+    { name: "Presence", href: "#presence" },
   ];
 
   return (
@@ -73,13 +72,13 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                <span className="text-[10px] lg:text-xs font-bold uppercase tracking-wider">Licensed Gwalior Madhya Pradesh Scrapper</span>
+                <span className="text-[10px] lg:text-xs font-bold uppercase tracking-wider">Licensed RVSF Facility</span>
               </div>
               <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-white leading-[1.1] mb-6 lg:mb-8 tracking-tighter">
                 Turn Your Scrap Into <span className="text-primary">Instant Cash</span>
               </h1>
               <p className="text-sm sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-10 lg:mb-12 leading-relaxed font-medium">
-                Gwalior's highest rates for old cars and motorcycles. We handle all paperwork, provide disposal proof, and offer free same-day collection.
+                Gwalior's highest rates for end-of-life vehicles. We handle all paperwork, provide disposal proof, and offer free same-day collection.
               </p>
               <div className="flex flex-row flex-wrap gap-4 justify-center lg:justify-start">
                 <Button size="lg" variant="outline" className="h-16 lg:h-20 px-8 lg:px-10 bg-white/5 text-white backdrop-blur-md rounded-2xl font-bold text-lg border-white/10 hover:bg-white/10 transition-all flex items-center justify-center gap-2" asChild>
@@ -188,7 +187,7 @@ export default function Home() {
                 Why Go <span className="text-primary">Direct?</span>
               </h2>
               <p className="text-slate-500 text-sm lg:text-xl max-w-2xl mx-auto font-medium">
-                Not all car scrap dealers operate with proper authorization. Choosing an unlicensed middleman puts you at legal risk.
+                Not all dealers operate with proper authorization. Choosing an unlicensed middleman puts you at legal risk.
               </p>
             </div>
 
@@ -332,7 +331,7 @@ export default function Home() {
                 Our <span className="text-primary">Facility</span>
               </h2>
               <p className="text-slate-500 text-sm lg:text-lg max-w-2xl mx-auto font-medium">
-                Professional vehicle recycling and industrial operations at our Gwalior scrap yard.
+                Professional vehicle recycling and industrial operations at our scrap facility.
               </p>
             </div>
 
@@ -495,8 +494,8 @@ export default function Home() {
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div className="text-sm">
-                    <p className="text-white font-black uppercase italic mb-1">Our Facility</p>
-                    <p className="font-medium text-slate-400">Survey no. 1338/3 Gram Antri<br />Jorasi mandir ke pas, Gwalior<br />Madhya Pradesh 475001</p>
+                    <p className="text-white font-black uppercase italic mb-1">City Office</p>
+                    <p className="font-medium text-slate-400">M 3/55, TRANSPORT NAGAR,<br />PARKING NO. 6, Gwalior,<br />Madhya Pradesh, 474010</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
