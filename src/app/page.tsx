@@ -1,9 +1,11 @@
+
 import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Testimonials } from "@/components/Testimonials";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
+import { PresenceSection } from "@/components/PresenceSection";
 import { 
   CheckCircle2, 
   FileText, 
@@ -61,7 +63,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-[90vh] lg:min-h-[85vh] flex items-center overflow-hidden" id="hero-section">
           <div className="absolute inset-0 z-0">
-            {/* Background image removed, keeping the professional gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/95 via-[#0f172a]/80 to-[#0f172a]/95 lg:bg-gradient-to-r lg:from-[#0f172a]/95 lg:to-[#0f172a]/40"></div>
           </div>
           
@@ -383,6 +384,9 @@ export default function Home() {
             </Carousel>
           </div>
         </section>
+
+        {/* Presence Section */}
+        <PresenceSection />
 
         {/* Enforcement Alert Section */}
         <section className="py-12 lg:py-28 bg-white relative overflow-hidden" id="alert">
