@@ -508,7 +508,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative h-[400px] lg:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-[#0ab99d]/30">
+              <div className="relative h-[300px] lg:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-[#0ab99d]/30">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1789.2439!2d78.13735627539958!3d26.23610778841496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c117136f1b13%3A0xf63976c643d7eb74!2sShivam%20Disposal!5e0!3m2!1sen!2sin!4v1740125000000!5m2!1sen!2sin&z=18"
                   className="w-full h-full border-0"

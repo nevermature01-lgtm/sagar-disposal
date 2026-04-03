@@ -124,12 +124,12 @@ export function PresenceSection() {
           )}
         </div>
 
-        <div className="mt-20 relative h-[400px] lg:h-[600px] bg-white/50 rounded-[3rem] border-4 border-[#0ab99d]/20 overflow-hidden group">
+        <div className="mt-20 relative h-[350px] lg:h-[600px] bg-white/50 rounded-[2rem] lg:rounded-[3rem] border-4 border-[#0ab99d]/20 overflow-hidden group">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,185,157,0.05),transparent)]"></div>
-          <div className="absolute inset-0 flex items-center justify-center p-6 lg:p-12">
+          <div className="absolute inset-0 flex items-center justify-center p-2 lg:p-12">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.737156942474!2d78.22157487538965!3d26.064094777161834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976be0027f310f7%3A0xc6c766785e2580a1!2sShivam%20Disposal%20RVSF%20Gwalior%20%7C%20Government%20Authorized!5e0!3m2!1sen!2sin!4v1740120000000!5m2!1sen!2sin"
-              className="w-full h-full rounded-[2rem] border-0 shadow-2xl relative z-20"
+              className="w-full h-full rounded-[1.5rem] lg:rounded-[2rem] border-0 shadow-2xl relative z-20"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -137,14 +137,14 @@ export function PresenceSection() {
             ></iframe>
           </div>
 
-          <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end pointer-events-none">
-            <div className="max-w-xs bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border-2 border-[#0ab99d]/30 relative z-30 pointer-events-auto">
-              <h5 className="text-lg font-black text-slate-900 uppercase italic tracking-tight mb-2">Expanding Every Week</h5>
-              <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                Visit our authorized facility for professional vehicle recycling and instant legal documentation.
+          <div className="absolute bottom-4 lg:bottom-10 left-4 lg:left-10 right-4 lg:right-10 flex justify-between items-end pointer-events-none">
+            <div className="max-w-[200px] lg:max-w-xs bg-white/95 backdrop-blur-md p-3 lg:p-6 rounded-xl lg:rounded-2xl shadow-xl border-2 border-[#0ab99d]/30 relative z-30 pointer-events-auto">
+              <h5 className="text-xs lg:text-lg font-black text-slate-900 uppercase italic tracking-tight mb-1 lg:mb-2">Expanding Every Week</h5>
+              <p className="text-[10px] lg:text-xs text-slate-500 font-medium leading-relaxed">
+                Visit our authorized facility for professional vehicle recycling.
               </p>
             </div>
-            <div className="flex gap-2 relative z-30">
+            <div className="hidden lg:flex gap-2 relative z-30">
               <div className="w-2 h-2 rounded-full bg-[#0ab99d]"></div>
               <div className="w-2 h-2 rounded-full bg-[#0ab99d]/30"></div>
               <div className="w-2 h-2 rounded-full bg-[#0ab99d]/30"></div>
