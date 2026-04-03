@@ -50,6 +50,7 @@ export default function Home() {
     { name: "Our Services", href: "#services" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact Us", href: "#contact" },
+    { name: "Our presence", href: "#presence" },
   ];
 
   return (
