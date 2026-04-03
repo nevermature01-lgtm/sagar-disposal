@@ -39,10 +39,10 @@ export function Navigation() {
     { name: "Home", href: "/" },
     { name: "Process", href: "#our-route" },
     { name: "Why Us", href: "#why-us" },
-    { name: "Our Services", href: "#services" },
+    { name: "Services", href: "#services" },
     { name: "Gallery", href: "#gallery" },
-    { name: "Contact Us", href: "#contact" },
-    { name: "Our presence", href: "#presence" },
+    { name: "Contact", href: "#contact" },
+    { name: "Presence", href: "#presence" },
   ];
 
   return (
@@ -56,17 +56,17 @@ export function Navigation() {
           <div className="flex items-center gap-6 text-slate-400">
             <span className="flex items-center gap-1.5 hover:text-primary transition-colors cursor-default">
               <Clock className="h-3 w-3 text-primary" />
-              24/7 Priority Support
+              24/7 Support
             </span>
             <span className="flex items-center gap-1.5 hover:text-primary transition-colors cursor-default">
               <MapPin className="h-3 w-3 text-primary" />
-              Gwalior Wide Collection
+              Free Gwalior Pickup
             </span>
           </div>
           <div className="flex items-center gap-4 text-primary">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5" />
-              Licensed Gwalior Madhya Pradesh Scrapper
+              Licensed RVSF Facility
             </span>
           </div>
         </div>
@@ -83,7 +83,7 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 lg:h-16">
-            {/* Brand Title (No Image) */}
+            {/* Brand Title */}
             <Link href="/" className="flex items-center gap-2.5 group shrink-0 -ml-1 lg:-ml-2">
               <div className="flex flex-col">
                 <span className={cn(
@@ -116,18 +116,18 @@ export function Navigation() {
             {/* Desktop Contact & CTA */}
             <div className="hidden md:flex items-center gap-5">
               <div className="flex flex-col items-end mr-2">
-                <span className="text-[9px] font-black text-primary uppercase tracking-widest leading-none mb-1">Contact Us</span>
+                <span className="text-[9px] font-black text-primary uppercase tracking-widest leading-none mb-1">Direct Line</span>
                 <Link href="tel:+917701088001" className={cn(
                   "text-sm lg:text-base font-black transition-colors leading-none mb-1",
                   scrolled ? "text-slate-900 dark:text-white" : "text-white"
                 )}>
-                  +91-7701088001
+                  +91 7701088001
                 </Link>
                 <Link href="tel:+917701088002" className={cn(
                   "text-sm lg:text-base font-black transition-colors leading-none",
                   scrolled ? "text-slate-900 dark:text-white" : "text-white"
                 )}>
-                  +91-7701088002
+                  +91 7701088002
                 </Link>
               </div>
               
@@ -180,7 +180,7 @@ export function Navigation() {
                   <SheetContent side="right" className="w-[280px] bg-white border-l-slate-200 p-0 flex flex-col">
                     <SheetHeader className="sr-only">
                       <SheetTitle>Navigation Menu</SheetTitle>
-                      <SheetDescription>Mobile navigation links for Shivam Disposal services and info.</SheetDescription>
+                      <SheetDescription>Access services and information about Shivam Disposal.</SheetDescription>
                     </SheetHeader>
                     <div className="px-6 py-10 border-b border-slate-100">
                       <div className="flex items-center gap-2.5 mb-10">
@@ -213,9 +213,9 @@ export function Navigation() {
                           <Phone className="h-5 w-5" />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">Call Our Team</p>
-                          <Link href="tel:+917701088001" className="text-sm font-black text-slate-900 leading-tight">+91-7701088001</Link>
-                          <Link href="tel:+917701088002" className="text-sm font-black text-slate-900 leading-tight">+91-7701088002</Link>
+                          <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">Direct Assistance</p>
+                          <Link href="tel:+917701088001" className="text-sm font-black text-slate-900 leading-tight">+91 7701088001</Link>
+                          <Link href="tel:+917701088002" className="text-sm font-black text-slate-900 leading-tight">+91 7701088002</Link>
                         </div>
                       </div>
                     </div>
