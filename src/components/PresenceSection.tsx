@@ -16,26 +16,11 @@ const mpCities = [
 ];
 
 const upCities = [
-  { name: "Agra" },
-  { name: "Jhansi" },
-  { name: "Etawah" },
-  { name: "Firozabad" },
-  { name: "Mainpuri" },
-  { name: "Kannauj" },
-  { name: "Orai" },
-  { name: "Jalaun" },
-  { name: "Kanpur" },
-  { name: "Farrukhabad" },
-  { name: "Shikohabad" }
+  "Agra", "Jhansi", "Etawah", "Firozabad", "Mainpuri", "Kannauj", "Orai", "Jalaun", "Kanpur", "Farrukhabad", "Shikohabad"
 ];
 
 const rjCities = [
-  { name: "Dholpur", highlight: true },
-  { name: "Karauli" },
-  { name: "Bharatpur" },
-  { name: "Hindaun" },
-  { name: "Gangapur City" },
-  { name: "Sawai Madhopur" }
+  "Dholpur", "Karauli", "Bharatpur", "Hindaun", "Gangapur City", "Sawai Madhopur"
 ];
 
 export function PresenceSection() {
@@ -109,17 +94,7 @@ export function PresenceSection() {
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {mpCities.map((city) => (
-                  <div 
-                    key={city}
-                    className="group p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30 transition-all duration-300 hover:-translate-y-1"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-[#0ab99d]/10 flex items-center justify-center text-slate-400 group-hover:text-[#0ab99d] transition-colors">
-                        <MapPin className="h-4 w-4" />
-                      </div>
-                      <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight">{city}</span>
-                    </div>
-                  </div>
+                  <CityCard key={city} name={city} />
                 ))}
                 <div className="p-4 rounded-2xl bg-slate-100/50 border border-dashed border-slate-300 flex items-center justify-center opacity-60">
                   <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest italic">Expanding Soon...</span>
@@ -132,19 +107,7 @@ export function PresenceSection() {
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {upCities.map((city) => (
-                  <div 
-                    key={city.name}
-                    className="group p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30 transition-all duration-300 hover:-translate-y-1"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-[#0ab99d]/10 flex items-center justify-center text-slate-400 group-hover:text-[#0ab99d] transition-colors">
-                        <MapPin className="h-4 w-4" />
-                      </div>
-                      <div className="flex flex-col">
-                        <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{city.name}</span>
-                      </div>
-                    </div>
-                  </div>
+                  <CityCard key={city} name={city} />
                 ))}
               </div>
             </div>
@@ -154,32 +117,7 @@ export function PresenceSection() {
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {rjCities.map((city) => (
-                  <div 
-                    key={city.name}
-                    className={cn(
-                      "group p-4 rounded-2xl transition-all duration-300 hover:-translate-y-1",
-                      city.highlight 
-                        ? "bg-[#0ab99d]/5 border-[#0ab99d] shadow-lg shadow-[#0ab99d]/5" 
-                        : "bg-white border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30"
-                    )}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={cn(
-                        "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
-                        city.highlight 
-                          ? "bg-[#0ab99d] text-white" 
-                          : "bg-slate-50 group-hover:bg-[#0ab99d]/10 text-slate-400 group-hover:text-[#0ab99d]"
-                      )}>
-                        <MapPin className="h-4 w-4" />
-                      </div>
-                      <div className="flex flex-col">
-                        <div className="flex items-center gap-1.5">
-                          <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{city.name}</span>
-                          {city.highlight && <div className="w-1 h-1 rounded-full bg-[#0ab99d] animate-pulse"></div>}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <CityCard key={city} name={city} />
                 ))}
               </div>
             </div>
@@ -224,5 +162,18 @@ export function PresenceSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function CityCard({ name }: { name: string }) {
+  return (
+    <div className="group p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30 transition-all duration-300 hover:-translate-y-1">
+      <div className="flex items-center gap-3">
+        <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-[#0ab99d]/10 flex items-center justify-center text-slate-400 group-hover:text-[#0ab99d] transition-colors">
+          <MapPin className="h-4 w-4" />
+        </div>
+        <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{name}</span>
+      </div>
+    </div>
   );
 }
