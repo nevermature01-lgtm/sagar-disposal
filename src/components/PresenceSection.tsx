@@ -128,7 +128,7 @@ export function PresenceSection() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,185,157,0.05),transparent)]"></div>
           <div className="absolute inset-0 flex items-center justify-center p-6 lg:p-12">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.447545938541!2d78.1818086!3d26.2162601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c10041280f93%3A0x66f6430349f7e8ef!2sSHIVAM%20DISPOSAL%20(RVSF)!5e0!3m2!1sen!2sin!4v1740118500000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.737156942474!2d78.22157487538965!3d26.064094777161834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976be0027f310f7%3A0xc6c766785e2580a1!2sShivam%20Disposal%20RVSF%20Gwalior%20%7C%20Government%20Authorized!5e0!3m2!1sen!2sin!4v1740120000000!5m2!1sen!2sin"
               className="w-full h-full rounded-[2rem] border-0 shadow-2xl relative z-20"
               allowFullScreen
               loading="lazy"
