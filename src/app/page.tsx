@@ -289,7 +289,8 @@ export default function Home() {
                 {
                   title: "Certificate of Vehicle Scrap (cvs)",
                   desc: "The final official document proving your vehicle has been scrapped following all laws.",
-                  icon: FileCheck
+                  icon: FileCheck,
+                  link: "/file-2 (1) (1).pdf"
                 },
                 {
                   title: "Registration Certificate Cancelation",
