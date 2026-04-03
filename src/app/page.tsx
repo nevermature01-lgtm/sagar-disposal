@@ -30,7 +30,8 @@ import {
   Phone,
   Zap,
   ImageIcon,
-  Clock
+  Clock,
+  ExternalLink
 } from "lucide-react";
 import {
   Carousel,
@@ -282,7 +283,8 @@ export default function Home() {
                 {
                   title: "Certificate of Deposit (cod)",
                   desc: "Instant digital and physical proof of vehicle handover for full legal security.",
-                  icon: FileText
+                  icon: FileText,
+                  link: "/file-1 (1).pdf"
                 },
                 {
                   title: "Certificate of Vehicle Scrap (cvs)",
@@ -307,12 +309,26 @@ export default function Home() {
               ].map((service, i) => {
                 const Icon = service.icon;
                 return (
-                  <div key={i} className="group p-8 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900/50 border-2 border-[#0ab99d]/10 hover:border-[#0ab99d]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0ab99d]/5">
+                  <div key={i} className="group p-8 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900/50 border-2 border-[#0ab99d]/20 hover:border-[#0ab99d]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0ab99d]/5 flex flex-col h-full">
                     <div className="w-14 h-14 rounded-2xl bg-[#0ab99d]/10 flex items-center justify-center text-[#0ab99d] mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                       <Icon className="h-7 w-7" />
                     </div>
                     <h3 className="text-xl font-black text-slate-900 dark:text-white mb-4 tracking-tight uppercase italic">{service.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm lg:text-base font-medium leading-relaxed">{service.desc}</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm lg:text-base font-medium leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                    {service.link && (
+                      <div className="mt-auto">
+                        <Button 
+                          variant="outline" 
+                          className="w-full border-[#0ab99d] text-[#0ab99d] hover:bg-[#0ab99d] hover:text-white font-black uppercase italic tracking-tighter rounded-xl transition-all flex items-center justify-center gap-2"
+                          asChild
+                        >
+                          <a href={service.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4" />
+                            View Certificate
+                          </a>
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -391,7 +407,7 @@ export default function Home() {
         {/* Enforcement Alert Section */}
         <section className="py-12 lg:py-28 bg-white relative overflow-hidden" id="alert">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative bg-white border-4 border-red-50 rounded-[2rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl shadow-red-900/5 overflow-hidden group">
+            <div className="relative bg-white border-4 border-[#0ab99d]/20 rounded-[2rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl shadow-slate-200/40 overflow-hidden group">
               <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full -mr-48 -mt-48 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
               
               <div className="flex flex-col items-center relative z-10 text-center">
@@ -428,7 +444,7 @@ export default function Home() {
         {/* Final CTA */}
         <section className="py-16 lg:py-28 bg-white dark:bg-[#0f172a]" id="contact">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-[#0ab99d] rounded-[3rem] lg:rounded-[4rem] p-10 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-[#0ab99d] rounded-[3rem] lg:rounded-[4rem] p-10 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl border-4 border-white/20">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent)]"></div>
               <div className="relative z-10 max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-7xl font-black mb-8 lg:mb-12 leading-[1.1] tracking-tighter italic uppercase">Ready to clear your driveway?</h2>
