@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Globe, Zap, Navigation as NavIcon, ChevronRight } from "lucide-react";
+import { MapPin, Globe, Zap, Navigation as NavIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 type StateType = "MP" | "UP" | "RJ";
 
@@ -17,26 +16,26 @@ const mpCities = [
 ];
 
 const upCities = [
-  { name: "Agra", dist: "~120 km" },
-  { name: "Jhansi", dist: "~100 km" },
-  { name: "Etawah", dist: "~160 km" },
-  { name: "Firozabad", dist: "~160 km" },
-  { name: "Mainpuri", dist: "~200 km" },
-  { name: "Kannauj", dist: "~240 km" },
-  { name: "Orai", dist: "~180 km" },
-  { name: "Jalaun", dist: "~170 km" },
-  { name: "Kanpur", dist: "~280 km" },
-  { name: "Farrukhabad", dist: "~280 km" },
-  { name: "Shikohabad", dist: "~180 km" }
+  { name: "Agra" },
+  { name: "Jhansi" },
+  { name: "Etawah" },
+  { name: "Firozabad" },
+  { name: "Mainpuri" },
+  { name: "Kannauj" },
+  { name: "Orai" },
+  { name: "Jalaun" },
+  { name: "Kanpur" },
+  { name: "Farrukhabad" },
+  { name: "Shikohabad" }
 ];
 
 const rjCities = [
-  { name: "Dholpur", dist: "~60 km", highlight: true },
-  { name: "Karauli", dist: "~150 km" },
-  { name: "Bharatpur", dist: "~180 km" },
-  { name: "Hindaun", dist: "~160 km" },
-  { name: "Gangapur City", dist: "~260 km" },
-  { name: "Sawai Madhopur", dist: "~280 km" }
+  { name: "Dholpur", highlight: true },
+  { name: "Karauli" },
+  { name: "Bharatpur" },
+  { name: "Hindaun" },
+  { name: "Gangapur City" },
+  { name: "Sawai Madhopur" }
 ];
 
 export function PresenceSection() {
@@ -143,7 +142,6 @@ export function PresenceSection() {
                       </div>
                       <div className="flex flex-col">
                         <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{city.name}</span>
-                        <span className="text-[9px] font-bold text-[#0ab99d] uppercase tracking-wider">{city.dist}</span>
                       </div>
                     </div>
                   </div>
@@ -179,7 +177,6 @@ export function PresenceSection() {
                           <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{city.name}</span>
                           {city.highlight && <div className="w-1 h-1 rounded-full bg-[#0ab99d] animate-pulse"></div>}
                         </div>
-                        <span className="text-[9px] font-bold text-[#0ab99d] uppercase tracking-wider">{city.dist}</span>
                       </div>
                     </div>
                   </div>
