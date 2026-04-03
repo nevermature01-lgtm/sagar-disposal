@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { MapPin, Globe, Zap, Navigation as NavIcon, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -26,7 +25,7 @@ const upCities = [
   { name: "Kannauj", dist: "~240 km" },
   { name: "Orai", dist: "~180 km" },
   { name: "Jalaun", dist: "~170 km" },
-  { name: "Kanpur", dist: "~280–300 km" },
+  { name: "Kanpur", dist: "~280 km" },
   { name: "Farrukhabad", dist: "~280 km" },
   { name: "Shikohabad", dist: "~180 km" }
 ];
@@ -36,8 +35,8 @@ const rjCities = [
   { name: "Karauli", dist: "~150 km" },
   { name: "Bharatpur", dist: "~180 km" },
   { name: "Hindaun", dist: "~160 km" },
-  { name: "Gangapur City", dist: "~260–280 km" },
-  { name: "Sawai Madhopur", dist: "~280–300 km" }
+  { name: "Gangapur City", dist: "~260 km" },
+  { name: "Sawai Madhopur", dist: "~280 km" }
 ];
 
 export function PresenceSection() {
@@ -45,7 +44,6 @@ export function PresenceSection() {
 
   return (
     <section className="py-20 lg:py-32 bg-slate-50/50 relative overflow-hidden" id="presence">
-      {/* Background Visual Elements */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="M0,50 Q25,30 50,50 T100,50" fill="none" stroke="#0ab99d" strokeWidth="0.5" />
@@ -54,7 +52,6 @@ export function PresenceSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0ab99d]/10 text-[#0ab99d] border border-[#0ab99d]/20 mb-6">
             <Globe className="h-4 w-4" />
@@ -89,7 +86,6 @@ export function PresenceSection() {
           </div>
         </div>
 
-        {/* State Tabs */}
         <div className="sticky top-24 z-30 mb-12">
           <div className="max-w-md mx-auto bg-white/80 backdrop-blur-xl p-1.5 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/40 flex">
             {(["MP", "UP", "RJ"] as StateType[]).map((state) => (
@@ -109,12 +105,11 @@ export function PresenceSection() {
           </div>
         </div>
 
-        {/* Content Display */}
         <div className="min-h-[500px]">
           {activeState === "MP" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {mpCities.map((city, i) => (
+                {mpCities.map((city) => (
                   <div 
                     key={city}
                     className="group p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30 transition-all duration-300 hover:-translate-y-1"
@@ -136,27 +131,20 @@ export function PresenceSection() {
 
           {activeState === "UP" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="space-y-4 max-w-4xl mx-auto">
-                {upCities.map((city, i) => (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {upCities.map((city) => (
                   <div 
                     key={city.name}
-                    className={cn(
-                      "group p-6 rounded-3xl bg-white border border-slate-100 shadow-lg flex items-center justify-between transition-all duration-500 hover:border-[#0ab99d]/50",
-                      i % 2 === 0 ? "ml-0 mr-12" : "ml-12 mr-0"
-                    )}
+                    className="group p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30 transition-all duration-300 hover:-translate-y-1"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-[#0ab99d]/10 flex items-center justify-center text-[#0ab99d] group-hover:scale-110 transition-transform">
-                        <MapPin className="h-6 w-6" />
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-[#0ab99d]/10 flex items-center justify-center text-slate-400 group-hover:text-[#0ab99d] transition-colors">
+                        <MapPin className="h-4 w-4" />
                       </div>
-                      <div>
-                        <h4 className="text-xl font-black text-slate-900 uppercase italic leading-none">{city.name}</h4>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Uttar Pradesh</p>
+                      <div className="flex flex-col">
+                        <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{city.name}</span>
+                        <span className="text-[9px] font-bold text-[#0ab99d] uppercase tracking-wider">{city.dist}</span>
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm font-black text-[#0ab99d] italic">{city.dist}</p>
-                      <p className="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">from main facility</p>
                     </div>
                   </div>
                 ))}
@@ -166,43 +154,32 @@ export function PresenceSection() {
 
           {activeState === "RJ" && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {rjCities.map((city) => (
                   <div 
                     key={city.name}
                     className={cn(
-                      "p-8 rounded-[2.5rem] bg-white border transition-all duration-300 relative overflow-hidden group",
+                      "group p-4 rounded-2xl transition-all duration-300 hover:-translate-y-1",
                       city.highlight 
-                        ? "border-[#0ab99d] shadow-2xl shadow-[#0ab99d]/10" 
-                        : "border-slate-100 shadow-xl shadow-slate-200/40 hover:border-[#0ab99d]/30"
+                        ? "bg-[#0ab99d]/5 border-[#0ab99d] shadow-lg shadow-[#0ab99d]/5" 
+                        : "bg-white border-slate-100 shadow-sm hover:shadow-xl hover:shadow-[#0ab99d]/5 hover:border-[#0ab99d]/30"
                     )}
                   >
-                    {city.highlight && (
-                      <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#0ab99d] text-white text-[9px] font-black uppercase tracking-widest rounded-bl-2xl">
-                        Nearest Facility
+                    <div className="flex items-center gap-3">
+                      <div className={cn(
+                        "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
+                        city.highlight 
+                          ? "bg-[#0ab99d] text-white" 
+                          : "bg-slate-50 group-hover:bg-[#0ab99d]/10 text-slate-400 group-hover:text-[#0ab99d]"
+                      )}>
+                        <MapPin className="h-4 w-4" />
                       </div>
-                    )}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className={cn(
-                          "w-14 h-14 rounded-2xl flex items-center justify-center transition-transform group-hover:rotate-12",
-                          city.highlight ? "bg-[#0ab99d] text-white" : "bg-slate-50 text-slate-400"
-                        )}>
-                          <MapPin className="h-7 w-7" />
+                      <div className="flex flex-col">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs lg:text-sm font-black text-slate-700 uppercase italic tracking-tight leading-tight">{city.name}</span>
+                          {city.highlight && <div className="w-1 h-1 rounded-full bg-[#0ab99d] animate-pulse"></div>}
                         </div>
-                        <div>
-                          <h4 className="text-2xl font-black text-slate-900 uppercase italic tracking-tight">{city.name}</h4>
-                          <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Rajasthan</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className={cn(
-                          "text-lg font-black italic",
-                          city.highlight ? "text-[#0ab99d]" : "text-slate-700"
-                        )}>{city.dist}</p>
-                        <Button variant="ghost" size="sm" className="h-8 text-[10px] font-black uppercase tracking-wider text-slate-400 hover:text-[#0ab99d]">
-                          View Location <ChevronRight className="ml-1 h-3 w-3" />
-                        </Button>
+                        <span className="text-[9px] font-bold text-[#0ab99d] uppercase tracking-wider">{city.dist}</span>
                       </div>
                     </div>
                   </div>
@@ -212,16 +189,11 @@ export function PresenceSection() {
           )}
         </div>
 
-        {/* Decorative Map Visual */}
         <div className="mt-20 relative h-[300px] lg:h-[500px] bg-white/50 rounded-[3rem] border border-slate-200 overflow-hidden group">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,185,157,0.05),transparent)]"></div>
-          
-          {/* Simplified SVG India/Regional Map Visualization */}
           <div className="absolute inset-0 flex items-center justify-center p-12">
             <div className="relative w-full max-w-3xl aspect-[1.2/1] bg-slate-100/30 rounded-3xl border border-slate-200/50 flex items-center justify-center">
               <span className="text-sm font-black text-slate-300 uppercase tracking-[0.5em] italic">North Central Coverage Map</span>
-              
-              {/* Pulsing Dots */}
               <div className="absolute top-[45%] left-[45%]">
                 <div className="relative flex h-8 w-8">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0ab99d] opacity-40"></span>
@@ -257,4 +229,3 @@ export function PresenceSection() {
     </section>
   );
 }
-
