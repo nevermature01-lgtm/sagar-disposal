@@ -617,7 +617,7 @@ export default function Home() {
 
           {/* Bottom Bar */}
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 text-center">
-            <p>© 2026 SHIVAM DISPOSAL.<br />LICENSED SCRAPPING FACILITY.</p>
+            <p>© 2026 SHIVAM DISPOSAL. ALL RIGHTS RESERVED.<br />LICENSED SCRAPPING FACILITY.</p>
           </div>
         </div>
       </footer>
